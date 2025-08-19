@@ -14,7 +14,7 @@ const EventHeader = () => {
           {/* Main title with playful styling */}
           <div className="flex justify-center">
             <img 
-              src="/lovable-uploads/93845d28-8782-41f6-8884-20a2aee0e1cb.png" 
+              src="/lovable-uploads/1230c78b-a957-49a8-959b-7fdc9186fca8.png" 
               alt="Una de Ciencia, Por Favor - Logo del evento"
               className="max-w-xl md:max-w-3xl w-full h-auto"
             />
