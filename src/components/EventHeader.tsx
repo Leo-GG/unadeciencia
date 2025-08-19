@@ -16,7 +16,7 @@ const EventHeader = () => {
             <img 
               src="/lovable-uploads/93845d28-8782-41f6-8884-20a2aee0e1cb.png" 
               alt="Una de Ciencia, Por Favor - Logo del evento"
-              className="max-w-md md:max-w-lg w-full h-auto"
+              className="max-w-xl md:max-w-3xl w-full h-auto"
             />
           </div>
           
