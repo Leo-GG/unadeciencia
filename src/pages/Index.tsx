@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
+  console.log("Index component is loading!");
+  
   const speakers = [
     {
       name: "Oscar Llorca",
