@@ -12,18 +12,12 @@ const EventHeader = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Main title with playful styling */}
-          <div className="space-y-4">
-            <div className="inline-flex items-center space-x-2 mb-4">
-              <span className="text-4xl">⭐</span>
-              <span className="text-4xl">🧪</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-black text-white leading-tight">
-              UNA DE
-              <br />
-              <span className="text-science-cream">CIENCIA,</span>
-              <br />
-              ¡POR FAVOR!
-            </h1>
+          <div className="flex justify-center">
+            <img 
+              src="/lovable-uploads/df963323-c2d8-40a6-bcaf-ca22f4b975b2.png" 
+              alt="Una de Ciencia, Por Favor - Logo del evento"
+              className="max-w-md md:max-w-lg w-full h-auto"
+            />
           </div>
           
           {/* Event details */}
