@@ -27,6 +27,21 @@ const Index = () => {
     }
   ];
 
+  const presenters = [
+    {
+      name: "Anabel Sáez",
+      title: "Presentadora del evento",
+      description: "Experta en divulgación científica, guiará la velada con su pasión por hacer la ciencia accesible a todos.",
+      expertise: "Divulgación Científica"
+    },
+    {
+      name: "Carlos Valdivia",
+      title: "Presentador del evento",
+      description: "Comunicador científico especializado en hacer comprensibles los avances más complejos de la investigación biomédica.",
+      expertise: "Comunicación Científica"
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -57,14 +72,31 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-foreground mb-4">
               Nuestros Ponentes
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Presentado por <strong>Anabel Sáez</strong> y <strong>Carlos Valdivia</strong>
-            </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {speakers.map((speaker, index) => (
               <SpeakerCard key={index} {...speaker} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Presenters Section */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Presentadores
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Los maestros de ceremonias que guiarán esta increíble velada científica
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {presenters.map((presenter, index) => (
+              <SpeakerCard key={index} {...presenter} />
             ))}
           </div>
         </div>
