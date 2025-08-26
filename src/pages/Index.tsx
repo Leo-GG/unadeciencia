@@ -2,6 +2,7 @@ import EventHeader from "@/components/EventHeader";
 import SpeakerCard from "@/components/SpeakerCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Instagram } from "lucide-react";
 
 const Index = () => {
   console.log("Index component is loading!");
@@ -224,6 +225,20 @@ const Index = () => {
               <p className="text-lg font-semibold">Una de Ciencia, Por Favor</p>
               <span className="text-2xl">🔬</span>
             </div>
+            
+            <div className="flex justify-center items-center space-x-2">
+              <span className="text-sm opacity-75">Síguenos en:</span>
+              <a 
+                href="https://www.instagram.com/unadecienciaporfavor?igsh=ZW9hdG52cGNpc2lm" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-3 py-2 rounded-full transition-all duration-300 transform hover:scale-105"
+              >
+                <Instagram size={20} />
+                <span className="text-sm font-medium">@unadecienciaporfavor</span>
+              </a>
+            </div>
+            
             <p className="text-sm opacity-75">
               © 2024 CNIO-PDA. Una iniciativa para acercar la ciencia a todos.
             </p>
