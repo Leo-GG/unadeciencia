@@ -44,8 +44,10 @@ const EventHeader = () => {
               <div className="flex items-center justify-center space-x-2 text-white">
                 <span className="text-2xl">📍</span>
                 <div>
-                  <p className="font-bold text-lg">La Excéntrica</p>
-                  <p className="text-sm opacity-90">Madrid</p>
+                  <a href="https://maps.app.goo.gl/ghGeLUkr5skfaWbE9" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    <p className="font-bold text-lg">La Excéntrica</p>
+                  </a>
+                  <p className="text-sm opacity-90">Calle las Fuentes 10, Madrid</p>
                 </div>
               </div>
             </div>

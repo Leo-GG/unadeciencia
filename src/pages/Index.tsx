@@ -84,8 +84,10 @@ const Index = () => {
                   <div className="text-4xl mb-4">📍</div>
                   <h3 className="text-2xl font-bold text-foreground">Ubicación</h3>
                   <div className="space-y-2">
-                    <p className="text-lg font-semibold text-primary">La Excéntrica</p>
-                    <p className="text-muted-foreground">Madrid</p>
+                    <a href="https://maps.app.goo.gl/ghGeLUkr5skfaWbE9" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                      <p className="text-lg font-semibold text-primary">La Excéntrica</p>
+                    </a>
+                    <p className="text-muted-foreground">Calle las Fuentes 10, Madrid</p>
                     <p className="text-sm text-muted-foreground">
                       Un espacio único dedicado a la divulgación científica y cultural
                     </p>
@@ -150,13 +152,13 @@ const Index = () => {
                     <div className="space-y-2">
                       <p className="text-lg font-semibold text-primary">CNIO-PDA</p>
                       <p className="text-sm text-muted-foreground">
-                        Centro Nacional de Investigaciones Oncológicas
+                        Asociación de investigadores postdoctorales del Centro Nacional de Investigaciones Oncológicas
                       </p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-              
+          
               <Card className="bg-gradient-card border-border/50">
                 <CardContent className="p-6">
                   <div className="text-center space-y-4">
@@ -164,8 +166,7 @@ const Index = () => {
                     <h3 className="text-xl font-bold text-foreground">Contacto</h3>
                     <div className="space-y-2">
                       <p className="text-sm text-muted-foreground">Para reservas e información:</p>
-                      <p className="text-primary font-medium">eventos@cnio.es</p>
-                      <p className="text-primary font-medium">+34 917 328 000</p>
+                      <p className="text-primary font-medium">unadeciencia@gmail.com</p>
                     </div>
                   </div>
                 </CardContent>
