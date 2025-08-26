@@ -56,7 +56,7 @@ const EventHeader = () => {
           {/* Call to action */}
           <div className="space-y-4">
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Descubre el fascinante mundo de la ciencia de la mano de expertos investigadores
+              Descubre el fascinante mundo de la ciencia de la mano de expertos investigadores en este evento gratuito de divulgación
             </p>
             <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
               <span className="text-white font-semibold">🎫 AFORO LIMITADO</span>
