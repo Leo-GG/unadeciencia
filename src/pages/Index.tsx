@@ -30,7 +30,7 @@ const Index = () => {
     {
       name: "David Sánchez",
       title: "Del ADN a la proteína: Cómo me convertí en granjero de bacterias",
-      description: "Una fascinante introducción a cómo las terapias dirigidas pueden 'cortar los cables' que alimentan el crecimiento tumoral.",
+      description: "",
       expertise: "Producción de Proteínas",
       image: davidImage
     }
