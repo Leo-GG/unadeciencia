@@ -1,38 +1,29 @@
-import EventHeader from "@/components/EventHeader";
-import SpeakerCard2 from "@/components/SpeakerCard2";
-import { Button } from "@/components/ui/button";
+import Edition1Header from "@/components/Edition1Header";
+import SpeakerCard1 from "@/components/SpeakerCard1";
 import { Card, CardContent } from "@/components/ui/card";
 import { Instagram } from "lucide-react";
-import blasImage from "../img/blas.jpeg";
-import anabelenImage from "../img/anabelen.jpeg";
-import davidImage from "../img/david.jpg";
-import anabelImage from "../img/Anabel.jpg";
-import carlosImage from "../img/Carlos.jpg";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
-const Index = () => {
-  console.log("Index component is loading!");
-  
+const Edition1 = () => {
   const speakers = [
     {
-      name: "Blas Chaves",
-      title: "El código secreto del cáncer: La trama que ni Villarejo conoce",
-      description: "",
-      expertise: "Oncología Computacional",
-      image: blasImage
+      name: "Oscar Llorca",
+      title: "El arte de ver las máquinas moleculares de la vida",
+      description: "Explora cómo las técnicas de imagen más avanzadas nos permiten visualizar y comprender las máquinas moleculares que hacen posible la vida.",
+      expertise: "Biología Estructural"
     },
     {
-      name: "Ana Belén Alonso",
-      title: "¿Qué pasa con la grasa?",
-      description: "",
-      expertise: "Interacciones Metabólicas",
-      image: anabelenImage
+      name: "Lucía Fernández",
+      title: "Reprogramando el sistema inmune para curar el cáncer",
+      description: "Descubre cómo la inmunoterapia está revolucionando el tratamiento del cáncer al entrenar nuestro propio sistema inmune para combatir la enfermedad.",
+      expertise: "Inmunoterapia"
     },
     {
-      name: "David Sánchez",
-      title: "Del ADN a la proteína: Cómo me convertí en granjero de bacterias",
+      name: "Sergi Roig",
+      title: "¡BOOM! Tratando el cáncer cortando los cables adecuados",
       description: "Una fascinante introducción a cómo las terapias dirigidas pueden 'cortar los cables' que alimentan el crecimiento tumoral.",
-      expertise: "Producción de Proteínas",
-      image: davidImage
+      expertise: "Oncología Molecular"
     }
   ];
 
@@ -41,23 +32,32 @@ const Index = () => {
       name: "Anabel Sáez",
       title: "Presentadora del evento",
       description: "Experta en divulgación científica, guiará la velada con su pasión por hacer la ciencia accesible a todos.",
-      expertise: "Divulgación Científica",
-      image: anabelImage
+      expertise: "Divulgación Científica"
     },
     {
       name: "Carlos Valdivia",
       title: "Presentador del evento",
       description: "Comunicador científico especializado en hacer comprensibles los avances más complejos de la investigación biomédica.",
-      expertise: "Comunicación Científica",
-      image: carlosImage
+      expertise: "Comunicación Científica"
     }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <EventHeader />
+      <Edition1Header />
       
+      {/* Back to current edition */}
+      <section className="py-8 px-4 bg-science-orange/10">
+        <div className="container mx-auto text-center">
+          <Link to="/">
+            <Button variant="outline" className="border-science-orange text-science-orange hover:bg-science-orange hover:text-white">
+              ← Volver a la edición actual
+            </Button>
+          </Link>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
@@ -68,7 +68,9 @@ const Index = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Únete a nosotros para una velada extraordinaria donde tres brillantes investigadores 
               compartirán sus descubrimientos más emocionantes en el mundo de la medicina y la biología. 
-              Descifraremos el lenguaje oculto del cáncer, seguiremos el viaje de las grasas por el cuerpo y nos colaremos en las bacterias para ver cómo fabrican proteínas. Una edición pensada para curiosos que quieren entender cómo funciona la vida desde dentro.
+              Desde las máquinas moleculares que impulsan la vida hasta las terapias más innovadoras 
+              contra el cáncer, prepárate para un viaje fascinante por los avances científicos 
+              que están cambiando nuestro mundo.
             </p>
           </div>
         </div>
@@ -85,7 +87,7 @@ const Index = () => {
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {speakers.map((speaker, index) => (
-              <SpeakerCard2 key={index} {...speaker} />
+              <SpeakerCard1 key={index} {...speaker} />
             ))}
           </div>
         </div>
@@ -105,7 +107,7 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {presenters.map((presenter, index) => (
-              <SpeakerCard2 key={index} {...presenter} />
+              <SpeakerCard1 key={index} {...presenter} />
             ))}
           </div>
         </div>
@@ -140,40 +142,18 @@ const Index = () => {
             <Card className="bg-gradient-card border-border/50">
               <CardContent className="p-8">
                 <div className="text-center space-y-4">
-                  <div className="text-4xl mb-4">🎫</div>
-                  <h3 className="text-2xl font-bold text-foreground">Reservas</h3>
+                  <div className="text-4xl mb-4">📅</div>
+                  <h3 className="text-2xl font-bold text-foreground">Fecha</h3>
                   <div className="space-y-2">
-                    <p className="text-lg font-semibold text-destructive">Aforo Limitado</p>
-                    <p className="text-muted-foreground">¡No te quedes sin tu plaza!</p>
+                    <p className="text-lg font-semibold text-primary">18 de Septiembre 2024</p>
+                    <p className="text-muted-foreground">19:00 - 21:00</p>
                     <p className="text-sm text-muted-foreground">
-                      Reserva tu entrada escaneando el código QR o contactando con nosotros
+                      Este evento ya ha finalizado
                     </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-accent">
-        <div className="container mx-auto max-w-2xl text-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-white">
-              ¿Listo para una noche de ciencia increíble?
-            </h2>
-            <p className="text-lg text-white/90">
-              Reserva tu plaza ahora y únete a nosotros para descubrir los secretos de la vida
-            </p>
-            <a href="https://forms.gle/Wv2TXnBvZAEL6u3s5" target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="lg" 
-                className="bg-white text-secondary hover:bg-white/90 font-semibold px-8 py-3 text-lg shadow-lg"
-              >
-                Reservar Entrada
-              </Button>
-            </a>
           </div>
         </div>
       </section>
@@ -208,19 +188,12 @@ const Index = () => {
                     <div className="text-3xl">📧</div>
                     <h3 className="text-xl font-bold text-foreground">Contacto</h3>
                     <div className="space-y-2">
-                      <p className="text-sm text-muted-foreground">Para reservas e información:</p>
+                      <p className="text-sm text-muted-foreground">Para información:</p>
                       <p className="text-primary font-medium">unadeciencia@gmail.com</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-            </div>
-            
-            <div className="pt-8 border-t border-border/30">
-              <p className="text-sm text-muted-foreground">
-                ¿Tienes preguntas sobre el evento? No dudes en contactarnos. 
-                Estaremos encantados de ayudarte a resolver cualquier duda sobre esta increíble noche de ciencia.
-              </p>
             </div>
           </div>
         </div>
@@ -250,7 +223,7 @@ const Index = () => {
             </div>
             
             <p className="text-sm opacity-75">
-              © 2025 CNIO-PDA. Una iniciativa para acercar la ciencia a todos.
+              © 2024 CNIO-PDA. Una iniciativa para acercar la ciencia a todos.
             </p>
           </div>
         </div>
@@ -259,4 +232,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Edition1;

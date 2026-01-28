@@ -1,55 +1,29 @@
 import EventHeader from "@/components/EventHeader";
-import SpeakerCard2 from "@/components/SpeakerCard2";
+import SpeakerCard from "@/components/SpeakerCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Instagram } from "lucide-react";
-import blasImage from "../img/blas.jpeg";
-import anabelenImage from "../img/anabelen.jpeg";
-import davidImage from "../img/david.jpg";
-import anabelImage from "../img/Anabel.jpg";
-import carlosImage from "../img/Carlos.jpg";
 
 const Index = () => {
   console.log("Index component is loading!");
   
   const speakers = [
     {
-      name: "Blas Chaves",
-      title: "El código secreto del cáncer: La trama que ni Villarejo conoce",
-      description: "",
-      expertise: "Oncología Computacional",
-      image: blasImage
+      name: "Oscar Llorca",
+      title: "El arte de ver las máquinas moleculares de la vida",
+      description: "Explora cómo las técnicas de imagen más avanzadas nos permiten visualizar y comprender las máquinas moleculares que hacen posible la vida.",
+      expertise: "Biología Estructural"
     },
     {
-      name: "Ana Belén Alonso",
-      title: "¿Qué pasa con la grasa?",
-      description: "",
-      expertise: "Interacciones Metabólicas",
-      image: anabelenImage
+      name: "Lucía Fernández",
+      title: "Reprogramando el sistema inmune para curar el cáncer",
+      description: "Descubre cómo la inmunoterapia está revolucionando el tratamiento del cáncer al entrenar nuestro propio sistema inmune para combatir la enfermedad.",
+      expertise: "Inmunoterapia"
     },
     {
-      name: "David Sánchez",
-      title: "Del ADN a la proteína: Cómo me convertí en granjero de bacterias",
+      name: "Sergi Roig",
+      title: "¡BOOM! Tratando el cáncer cortando los cables adecuados",
       description: "Una fascinante introducción a cómo las terapias dirigidas pueden 'cortar los cables' que alimentan el crecimiento tumoral.",
-      expertise: "Producción de Proteínas",
-      image: davidImage
-    }
-  ];
-
-  const presenters = [
-    {
-      name: "Anabel Sáez",
-      title: "Presentadora del evento",
-      description: "Experta en divulgación científica, guiará la velada con su pasión por hacer la ciencia accesible a todos.",
-      expertise: "Divulgación Científica",
-      image: anabelImage
-    },
-    {
-      name: "Carlos Valdivia",
-      title: "Presentador del evento",
-      description: "Comunicador científico especializado en hacer comprensibles los avances más complejos de la investigación biomédica.",
-      expertise: "Comunicación Científica",
-      image: carlosImage
+      expertise: "Oncología Molecular"
     }
   ];
 
@@ -68,7 +42,9 @@ const Index = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Únete a nosotros para una velada extraordinaria donde tres brillantes investigadores 
               compartirán sus descubrimientos más emocionantes en el mundo de la medicina y la biología. 
-              Descifraremos el lenguaje oculto del cáncer, seguiremos el viaje de las grasas por el cuerpo y nos colaremos en las bacterias para ver cómo fabrican proteínas. Una edición pensada para curiosos que quieren entender cómo funciona la vida desde dentro.
+              Desde las máquinas moleculares que impulsan la vida hasta las terapias más innovadoras 
+              contra el cáncer, prepárate para un viaje fascinante por los avances científicos 
+              que están cambiando nuestro mundo.
             </p>
           </div>
         </div>
@@ -81,31 +57,14 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-foreground mb-4">
               Nuestros Ponentes
             </h2>
+            <p className="text-lg text-muted-foreground">
+              Presentado por <strong>Anabel Sáez</strong> y <strong>Carlos Valdivia</strong>
+            </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {speakers.map((speaker, index) => (
-              <SpeakerCard2 key={index} {...speaker} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Presenters Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              Presentadores
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Los maestros de ceremonias que guiarán esta increíble velada científica
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {presenters.map((presenter, index) => (
-              <SpeakerCard2 key={index} {...presenter} />
+              <SpeakerCard key={index} {...speaker} />
             ))}
           </div>
         </div>
@@ -125,10 +84,8 @@ const Index = () => {
                   <div className="text-4xl mb-4">📍</div>
                   <h3 className="text-2xl font-bold text-foreground">Ubicación</h3>
                   <div className="space-y-2">
-                    <a href="https://maps.app.goo.gl/ghGeLUkr5skfaWbE9" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                      <p className="text-lg font-semibold text-primary">La Excéntrica</p>
-                    </a>
-                    <p className="text-muted-foreground">Calle las Fuentes 10, Madrid</p>
+                    <p className="text-lg font-semibold text-primary">La Excéntrica</p>
+                    <p className="text-muted-foreground">Madrid</p>
                     <p className="text-sm text-muted-foreground">
                       Un espacio único dedicado a la divulgación científica y cultural
                     </p>
@@ -166,14 +123,12 @@ const Index = () => {
             <p className="text-lg text-white/90">
               Reserva tu plaza ahora y únete a nosotros para descubrir los secretos de la vida
             </p>
-            <a href="https://forms.gle/Wv2TXnBvZAEL6u3s5" target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="lg" 
-                className="bg-white text-secondary hover:bg-white/90 font-semibold px-8 py-3 text-lg shadow-lg"
-              >
-                Reservar Entrada
-              </Button>
-            </a>
+            <Button 
+              size="lg" 
+              className="bg-white text-secondary hover:bg-white/90 font-semibold px-8 py-3 text-lg shadow-lg"
+            >
+              Reservar Entrada
+            </Button>
           </div>
         </div>
       </section>
@@ -195,13 +150,13 @@ const Index = () => {
                     <div className="space-y-2">
                       <p className="text-lg font-semibold text-primary">CNIO-PDA</p>
                       <p className="text-sm text-muted-foreground">
-                        Asociación de investigadores postdoctorales del Centro Nacional de Investigaciones Oncológicas
+                        Centro Nacional de Investigaciones Oncológicas
                       </p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-          
+              
               <Card className="bg-gradient-card border-border/50">
                 <CardContent className="p-6">
                   <div className="text-center space-y-4">
@@ -209,7 +164,8 @@ const Index = () => {
                     <h3 className="text-xl font-bold text-foreground">Contacto</h3>
                     <div className="space-y-2">
                       <p className="text-sm text-muted-foreground">Para reservas e información:</p>
-                      <p className="text-primary font-medium">unadeciencia@gmail.com</p>
+                      <p className="text-primary font-medium">eventos@cnio.es</p>
+                      <p className="text-primary font-medium">+34 917 328 000</p>
                     </div>
                   </div>
                 </CardContent>
@@ -235,22 +191,8 @@ const Index = () => {
               <p className="text-lg font-semibold">Una de Ciencia, Por Favor</p>
               <span className="text-2xl">🔬</span>
             </div>
-            
-            <div className="flex justify-center items-center space-x-2">
-              <span className="text-sm opacity-75">Síguenos en:</span>
-              <a 
-                href="https://www.instagram.com/unadecienciaporfavor?igsh=ZW9hdG52cGNpc2lm" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-3 py-2 rounded-full transition-all duration-300 transform hover:scale-105"
-              >
-                <Instagram size={20} />
-                <span className="text-sm font-medium">@unadecienciaporfavor</span>
-              </a>
-            </div>
-            
             <p className="text-sm opacity-75">
-              © 2025 CNIO-PDA. Una iniciativa para acercar la ciencia a todos.
+              © 2024 CNIO-PDA. Una iniciativa para acercar la ciencia a todos.
             </p>
           </div>
         </div>
