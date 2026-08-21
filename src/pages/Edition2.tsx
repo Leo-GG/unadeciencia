@@ -1,33 +1,37 @@
-import EventHeader from "@/components/EventHeader";
-import SpeakerCard3 from "@/components/SpeakerCard3";
-import { Button } from "@/components/ui/button";
+import Edition2Header from "@/components/Edition2Header";
+import SpeakerCard2 from "@/components/SpeakerCard2";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+import blasImage from "../img/blas.jpeg";
+import anabelenImage from "../img/anabelen.jpeg";
+import davidImage from "../img/david.jpg";
 import anabelImage from "../img/Anabel.jpg";
 import carlosImage from "../img/Carlos.jpg";
 
-const Index = () => {
-  console.log("Index component is loading!");
-  
+const Edition2 = () => {
   const speakers = [
     {
-      name: "Lucía Garrido",
-      title: "Vesículas extracelulares, el WhatsApp de nuestras células",
+      name: "Blas Chaves",
+      title: "El código secreto del cáncer: La trama que ni Villarejo conoce",
       description: "",
-      expertise: "Vesículas Extracelulares"
+      expertise: "Oncología Computacional",
+      image: blasImage
     },
     {
-      name: "Jaime Franco-Mansilla",
-      title: "Inmunotinder: el supermatch de los anticuerpos biespecíficos",
+      name: "Ana Belén Alonso",
+      title: "¿Qué pasa con la grasa?",
       description: "",
-      expertise: "Inmunoterapia"
+      expertise: "Interacciones Metabólicas",
+      image: anabelenImage
     },
     {
-      name: "Juan Tasis",
-      title: "Éxtasis de las profundidades. ¿Qué tiene que ver una borrachera y el buceo profundo?",
+      name: "David Sánchez",
+      title: "Del ADN a la proteína: Cómo me convertí en granjero de bacterias",
       description: "",
-      expertise: "Fisiología del Buceo"
+      expertise: "Producción de Proteínas",
+      image: davidImage
     }
   ];
 
@@ -51,8 +55,24 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <EventHeader />
-      
+      <Edition2Header />
+
+      {/* Back to current edition */}
+      <section className="py-8 px-4 bg-science-blue/10">
+        <div className="container mx-auto text-center space-y-3">
+          <Link to="/">
+            <Button variant="outline" className="border-science-blue text-science-blue hover:bg-science-blue hover:text-white">
+              ← Volver a la edición actual
+            </Button>
+          </Link>
+          <div>
+            <Link to="/edicion-1" className="text-sm text-muted-foreground underline hover:text-foreground transition-colors">
+              Ver la 1ª edición
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
@@ -61,12 +81,10 @@ const Index = () => {
               Una noche de ciencia increíble
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Únete a nosotros para una velada extraordinaria donde tres brillantes investigadores
-              compartirán sus descubrimientos más emocionantes en el mundo de la medicina y la biología.
-              Escucharemos los mensajes que se envían nuestras células, veremos cómo los anticuerpos
-              encuentran su pareja perfecta y bajaremos a las profundidades del mar para descubrir
-              qué tiene que ver el buceo con una borrachera. Una edición de verano para curiosos que
-              quieren entender cómo funciona la vida desde dentro.
+              Una velada extraordinaria donde tres brillantes investigadores compartieron sus
+              descubrimientos más emocionantes en el mundo de la medicina y la biología.
+              Desciframos el lenguaje oculto del cáncer, seguimos el viaje de las grasas por el cuerpo
+              y nos colamos en las bacterias para ver cómo fabrican proteínas.
             </p>
           </div>
         </div>
@@ -80,10 +98,10 @@ const Index = () => {
               Nuestros Ponentes
             </h2>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {speakers.map((speaker, index) => (
-              <SpeakerCard3 key={index} {...speaker} />
+              <SpeakerCard2 key={index} {...speaker} />
             ))}
           </div>
         </div>
@@ -97,13 +115,13 @@ const Index = () => {
               Presentadores
             </h2>
             <p className="text-lg text-muted-foreground">
-              Los maestros de ceremonias que guiarán esta increíble velada científica
+              Los maestros de ceremonias que guiaron esta increíble velada científica
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {presenters.map((presenter, index) => (
-              <SpeakerCard3 key={index} {...presenter} />
+              <SpeakerCard2 key={index} {...presenter} />
             ))}
           </div>
         </div>
@@ -115,7 +133,7 @@ const Index = () => {
           <h2 className="text-4xl font-bold text-center text-foreground mb-12">
             Detalles del Evento
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="bg-gradient-card border-border/50">
               <CardContent className="p-8">
@@ -134,52 +152,22 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-gradient-card border-border/50">
               <CardContent className="p-8">
                 <div className="text-center space-y-4">
-                  <div className="text-4xl mb-4">🎫</div>
-                  <h3 className="text-2xl font-bold text-foreground">Reservas</h3>
+                  <div className="text-4xl mb-4">📅</div>
+                  <h3 className="text-2xl font-bold text-foreground">Fecha</h3>
                   <div className="space-y-2">
-                    <p className="text-lg font-semibold text-destructive">Aforo Limitado</p>
-                    <p className="text-muted-foreground">¡No te quedes sin tu plaza!</p>
+                    <p className="text-lg font-semibold text-primary">5 de Febrero de 2026</p>
+                    <p className="text-muted-foreground">19:00 - 21:00</p>
                     <p className="text-sm text-muted-foreground">
-                      Reserva tu entrada rellenando el formulario de inscripción
+                      Este evento ya ha finalizado
                     </p>
-                    <a
-                      href="https://forms.gle/KWz9grUwTXPQX7Q89"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block text-primary font-medium underline hover:no-underline"
-                    >
-                      Formulario de inscripción
-                    </a>
                   </div>
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-accent">
-        <div className="container mx-auto max-w-2xl text-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-white">
-              ¿Listo para una noche de ciencia increíble?
-            </h2>
-            <p className="text-lg text-white/90">
-              Reserva tu plaza ahora y únete a nosotros para descubrir los secretos de la vida
-            </p>
-            <a href="https://forms.gle/KWz9grUwTXPQX7Q89" target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="lg" 
-                className="bg-white text-secondary hover:bg-white/90 font-semibold px-8 py-3 text-lg shadow-lg"
-              >
-                Reservar Entrada
-              </Button>
-            </a>
           </div>
         </div>
       </section>
@@ -191,7 +179,7 @@ const Index = () => {
             <h2 className="text-3xl font-bold text-foreground">
               Información y Contacto
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="bg-gradient-card border-border/50">
                 <CardContent className="p-6">
@@ -207,26 +195,19 @@ const Index = () => {
                   </div>
                 </CardContent>
               </Card>
-          
+
               <Card className="bg-gradient-card border-border/50">
                 <CardContent className="p-6">
                   <div className="text-center space-y-4">
                     <div className="text-3xl">📧</div>
                     <h3 className="text-xl font-bold text-foreground">Contacto</h3>
                     <div className="space-y-2">
-                      <p className="text-sm text-muted-foreground">Para reservas e información:</p>
+                      <p className="text-sm text-muted-foreground">Para información:</p>
                       <p className="text-primary font-medium">unadeciencia@gmail.com</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-            </div>
-            
-            <div className="pt-8 border-t border-border/30">
-              <p className="text-sm text-muted-foreground">
-                ¿Tienes preguntas sobre el evento? No dudes en contactarnos. 
-                Estaremos encantados de ayudarte a resolver cualquier duda sobre esta increíble noche de ciencia.
-              </p>
             </div>
           </div>
         </div>
@@ -241,12 +222,12 @@ const Index = () => {
               <p className="text-lg font-semibold">Una de Ciencia, Por Favor</p>
               <span className="text-2xl">🔬</span>
             </div>
-            
+
             <div className="flex justify-center items-center space-x-2">
               <span className="text-sm opacity-75">Síguenos en:</span>
-              <a 
-                href="https://www.instagram.com/unadecienciaporfavor?igsh=ZW9hdG52cGNpc2lm" 
-                target="_blank" 
+              <a
+                href="https://www.instagram.com/unadecienciaporfavor?igsh=ZW9hdG52cGNpc2lm"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-3 py-2 rounded-full transition-all duration-300 transform hover:scale-105"
               >
@@ -254,16 +235,9 @@ const Index = () => {
                 <span className="text-sm font-medium">@unadecienciaporfavor</span>
               </a>
             </div>
-            
-            <p className="text-sm opacity-75">
-              © 2025 CNIO-PDA. Una iniciativa para acercar la ciencia a todos.
-            </p>
 
             <p className="text-sm opacity-75">
-              Ediciones anteriores: {" "}
-              <Link to="/edicion-2" className="underline hover:opacity-100">2ª edición</Link>
-              {" · "}
-              <Link to="/edicion-1" className="underline hover:opacity-100">1ª edición</Link>
+              © 2026 CNIO-PDA. Una iniciativa para acercar la ciencia a todos.
             </p>
           </div>
         </div>
@@ -272,4 +246,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Edition2;

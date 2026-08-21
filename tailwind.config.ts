@@ -56,6 +56,7 @@ export default {
 					orange: 'hsl(var(--science-orange))',
 					blue: 'hsl(var(--science-blue))',
 					teal: 'hsl(var(--science-teal))',
+					sun: 'hsl(var(--science-sun))',
 					warm: 'hsl(var(--science-warm))',
 					cream: 'hsl(var(--science-cream))'
 				},
@@ -73,6 +74,7 @@ export default {
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-edition1': 'var(--gradient-edition1)',
+				'gradient-edition2': 'var(--gradient-edition2)',
 				'gradient-card': 'var(--gradient-card)',
 				'gradient-accent': 'var(--gradient-accent)'
 			},
@@ -107,12 +109,49 @@ export default {
 						transform: 'translateY(100vh) rotate(360deg)',
 						opacity: '0.3'
 					}
+				},
+				'float-up': {
+					'0%': {
+						transform: 'translateY(10vh) translateX(0) rotate(0deg)',
+						opacity: '0'
+					},
+					'15%': {
+						opacity: '1'
+					},
+					'85%': {
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translateY(-100vh) translateX(4vw) rotate(25deg)',
+						opacity: '0'
+					}
+				},
+				'sway': {
+					'0%, 100%': {
+						transform: 'translateY(0) rotate(-6deg)'
+					},
+					'50%': {
+						transform: 'translateY(-14px) rotate(6deg)'
+					}
+				},
+				'sun-pulse': {
+					'0%, 100%': {
+						transform: 'scale(1) rotate(0deg)',
+						opacity: '0.85'
+					},
+					'50%': {
+						transform: 'scale(1.08) rotate(180deg)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'snowfall': 'snowfall linear infinite'
+				'snowfall': 'snowfall linear infinite',
+				'float-up': 'float-up linear infinite',
+				'sway': 'sway ease-in-out infinite',
+				'sun-pulse': 'sun-pulse 12s ease-in-out infinite'
 			}
 		}
 	},

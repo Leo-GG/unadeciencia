@@ -3,31 +3,27 @@ import { Link } from "react-router-dom";
 const EventHeader = () => {
   return (
     <section className="relative min-h-screen bg-gradient-hero flex items-center justify-center overflow-hidden">
-      {/* Animated snowflake elements */}
+      {/* Summer sun */}
+      <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-yellow-200/40 blur-3xl animate-sun-pulse pointer-events-none"></div>
+      <div className="absolute top-10 right-10 text-white/70 text-7xl animate-sun-pulse pointer-events-none">☀️</div>
+
+      {/* Floating summer elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Snowflakes with different sizes and animations */}
-        <div className="snowflake absolute top-[5%] left-[10%] text-white/80 text-4xl animate-snowfall" style={{ animationDelay: '0s', animationDuration: '10s' }}>❄</div>
-        <div className="snowflake absolute top-[10%] left-[25%] text-white/90 text-2xl animate-snowfall" style={{ animationDelay: '2s', animationDuration: '12s' }}>❄</div>
-        <div className="snowflake absolute top-[3%] left-[40%] text-white/70 text-5xl animate-snowfall" style={{ animationDelay: '4s', animationDuration: '8s' }}>❄</div>
-        <div className="snowflake absolute top-[8%] left-[55%] text-white/85 text-3xl animate-snowfall" style={{ animationDelay: '1s', animationDuration: '11s' }}>❄</div>
-        <div className="snowflake absolute top-[2%] left-[70%] text-white/75 text-4xl animate-snowfall" style={{ animationDelay: '3s', animationDuration: '9s' }}>❄</div>
-        <div className="snowflake absolute top-[6%] left-[85%] text-white/90 text-2xl animate-snowfall" style={{ animationDelay: '5s', animationDuration: '13s' }}>❄</div>
-        <div className="snowflake absolute top-[4%] left-[15%] text-white/60 text-3xl animate-snowfall" style={{ animationDelay: '6s', animationDuration: '10s' }}>❄</div>
-        <div className="snowflake absolute top-[7%] left-[60%] text-white/80 text-4xl animate-snowfall" style={{ animationDelay: '7s', animationDuration: '14s' }}>❄</div>
-        <div className="snowflake absolute top-[1%] left-[35%] text-white/70 text-2xl animate-snowfall" style={{ animationDelay: '8s', animationDuration: '11s' }}>❄</div>
-        <div className="snowflake absolute top-[9%] left-[80%] text-white/85 text-5xl animate-snowfall" style={{ animationDelay: '9s', animationDuration: '12s' }}>❄</div>
-        <div className="snowflake absolute top-[5%] left-[50%] text-white/65 text-3xl animate-snowfall" style={{ animationDelay: '1.5s', animationDuration: '9s' }}>❄</div>
-        <div className="snowflake absolute top-[3%] left-[95%] text-white/75 text-4xl animate-snowfall" style={{ animationDelay: '4.5s', animationDuration: '10s' }}>❄</div>
-        <div className="snowflake absolute top-[6%] left-[5%] text-white/55 text-2xl animate-snowfall" style={{ animationDelay: '0.5s', animationDuration: '11s' }}>❄</div>
-        <div className="snowflake absolute top-[2%] left-[18%] text-white/80 text-3xl animate-snowfall" style={{ animationDelay: '3.5s', animationDuration: '9s' }}>❄</div>
-        <div className="snowflake absolute top-[8%] left-[32%] text-white/90 text-4xl animate-snowfall" style={{ animationDelay: '5.5s', animationDuration: '10s' }}>❄</div>
-        <div className="snowflake absolute top-[4%] left-[45%] text-white/70 text-2xl animate-snowfall" style={{ animationDelay: '7.5s', animationDuration: '12s' }}>❄</div>
-        <div className="snowflake absolute top-[1%] left-[58%] text-white/85 text-5xl animate-snowfall" style={{ animationDelay: '2.5s', animationDuration: '8s' }}>❄</div>
-        <div className="snowflake absolute top-[7%] left-[72%] text-white/60 text-3xl animate-snowfall" style={{ animationDelay: '6.5s', animationDuration: '13s' }}>❄</div>
-        <div className="snowflake absolute top-[3%] left-[88%] text-white/75 text-4xl animate-snowfall" style={{ animationDelay: '8.5s', animationDuration: '11s' }}>❄</div>
-        <div className="snowflake absolute top-[9%] left-[22%] text-white/90 text-2xl animate-snowfall" style={{ animationDelay: '1.2s', animationDuration: '10s' }}>❄</div>
-        <div className="snowflake absolute top-[5%] left-[65%] text-white/65 text-3xl animate-snowfall" style={{ animationDelay: '4.2s', animationDuration: '9s' }}>❄</div>
-        <div className="snowflake absolute top-[2%] left-[78%] text-white/80 text-5xl animate-snowfall" style={{ animationDelay: '6.2s', animationDuration: '14s' }}>❄</div>
+        <div className="absolute bottom-0 left-[8%] text-white/70 text-4xl animate-float-up" style={{ animationDelay: '0s', animationDuration: '16s' }}>🌴</div>
+        <div className="absolute bottom-0 left-[20%] text-white/60 text-3xl animate-float-up" style={{ animationDelay: '2.5s', animationDuration: '19s' }}>🐚</div>
+        <div className="absolute bottom-0 left-[33%] text-white/75 text-5xl animate-float-up" style={{ animationDelay: '5s', animationDuration: '15s' }}>🌊</div>
+        <div className="absolute bottom-0 left-[46%] text-white/65 text-3xl animate-float-up" style={{ animationDelay: '1.5s', animationDuration: '20s' }}>🍹</div>
+        <div className="absolute bottom-0 left-[58%] text-white/70 text-4xl animate-float-up" style={{ animationDelay: '7s', animationDuration: '17s' }}>🕶️</div>
+        <div className="absolute bottom-0 left-[70%] text-white/60 text-3xl animate-float-up" style={{ animationDelay: '3.5s', animationDuration: '18s' }}>🏖️</div>
+        <div className="absolute bottom-0 left-[84%] text-white/75 text-4xl animate-float-up" style={{ animationDelay: '6s', animationDuration: '16s' }}>🍦</div>
+        <div className="absolute bottom-0 left-[14%] text-white/55 text-3xl animate-float-up" style={{ animationDelay: '9s', animationDuration: '21s' }}>🌞</div>
+        <div className="absolute bottom-0 left-[27%] text-white/70 text-4xl animate-float-up" style={{ animationDelay: '4.2s', animationDuration: '14s' }}>⛱️</div>
+        <div className="absolute bottom-0 left-[52%] text-white/60 text-3xl animate-float-up" style={{ animationDelay: '8.5s', animationDuration: '19s' }}>🐠</div>
+        <div className="absolute bottom-0 left-[64%] text-white/65 text-4xl animate-float-up" style={{ animationDelay: '10s', animationDuration: '17s' }}>🍉</div>
+        <div className="absolute bottom-0 left-[92%] text-white/70 text-3xl animate-float-up" style={{ animationDelay: '2s', animationDuration: '20s' }}>🌺</div>
+
+        <div className="absolute top-[18%] left-[6%] text-white/40 text-5xl animate-sway" style={{ animationDelay: '0s', animationDuration: '7s' }}>🌴</div>
+        <div className="absolute top-[26%] right-[8%] text-white/40 text-5xl animate-sway" style={{ animationDelay: '1.5s', animationDuration: '8s' }}>🌴</div>
       </div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
@@ -44,11 +40,16 @@ const EventHeader = () => {
           {/* Edition badge */}
           <div className="space-y-2">
             <div className="inline-block bg-white/30 backdrop-blur-sm rounded-full px-6 py-2">
-              <span className="text-white font-bold text-lg">❄ 2ª EDICIÓN ❄</span>
+              <span className="text-white font-bold text-lg">☀️ 3ª EDICIÓN ☀️</span>
             </div>
-            <div>
-              <Link to="/edicion-1" className="text-white/80 hover:text-white text-sm underline transition-colors">
-                Ver ediciones anteriores
+            <div className="flex justify-center items-center gap-3 text-sm">
+              <span className="text-white/70">Ediciones anteriores:</span>
+              <Link to="/edicion-2" className="text-white/90 hover:text-white underline transition-colors">
+                2ª edición
+              </Link>
+              <span className="text-white/50">·</span>
+              <Link to="/edicion-1" className="text-white/90 hover:text-white underline transition-colors">
+                1ª edición
               </Link>
             </div>
           </div>
@@ -59,8 +60,8 @@ const EventHeader = () => {
               <div className="flex items-center justify-center space-x-2">
                 <span className="text-2xl">📅</span>
                 <div>
-                  <p className="font-bold text-lg">5 de Febrero de 2026</p>
-                  <p className="text-sm opacity-90">Jueves</p>
+                  <p className="font-bold text-lg">17 de Septiembre de 2025</p>
+                  <p className="text-sm opacity-90">Miércoles</p>
                 </div>
               </div>
               
@@ -92,7 +93,7 @@ const EventHeader = () => {
               Descubre el fascinante mundo de la ciencia de la mano de expertos investigadores en este evento gratuito de divulgación
             </p>
             <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-              <span className="text-lg font-semibold">🎫 AFORO LIMITADO</span>
+              <span className="text-white text-lg font-semibold">🎫 AFORO LIMITADO</span>
             </div>
           </div>
         </div>
