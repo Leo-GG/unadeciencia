@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+import luciaImage from "../img/lucia_2026.jpg";
+import jaimeImage from "../img/jaime_2026.jpg";
 import anabelImage from "../img/Anabel.jpg";
 import carlosImage from "../img/Carlos.jpg";
 
@@ -15,13 +17,15 @@ const Index = () => {
       name: "Lucía Garrido",
       title: "Vesículas extracelulares, el WhatsApp de nuestras células",
       description: "",
-      expertise: "Vesículas Extracelulares"
+      expertise: "Vesículas Extracelulares",
+      image: luciaImage
     },
     {
       name: "Jaime Franco-Mansilla",
       title: "Inmunotinder: el supermatch de los anticuerpos biespecíficos",
       description: "",
-      expertise: "Inmunoterapia"
+      expertise: "Inmunoterapia",
+      image: jaimeImage
     },
     {
       name: "Juan Tasis",
