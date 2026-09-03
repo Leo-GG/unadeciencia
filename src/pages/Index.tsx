@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import luciaImage from "../img/lucia_2026.jpg";
-import jaimeImage from "../img/jaime_2026.jpg";
+import jaimeImage from "../img/jaime_2026.jpeg";
 import anabelImage from "../img/Anabel.jpg";
 import carlosImage from "../img/Carlos.jpg";
 
